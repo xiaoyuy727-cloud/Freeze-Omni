@@ -13,6 +13,15 @@ from typing import Dict, List, Optional, Tuple
 from transformers import AutoModelForCausalLM
 from transformers import AutoTokenizer
 
+try:
+    from tuning import get as get_tuning
+except ImportError:  # fall back to the original hard-coded values if ./ is not on PYTHONPATH
+    print("[tuning] WARNING: tuning.json is NOT active (PYTHONPATH must include "
+          "the repo root); using hard-coded defaults")
+
+    def get_tuning(key, default=None):
+        return default
+
 from models.adapter import *
 
 IGNORE_ID = -1
@@ -416,10 +425,14 @@ class AudioLLM(torch.nn.Module):
             state_prob = prob[-1].clone()
             state_1 = state_prob[1]
             state_2 = state_prob[2]
-            print("State 1 prob: {:.4f}, State 2 prob: {:.4f}".format(state_1.item(), state_2.item()))
-            if state_2 > 0.5:
+            # thresholds are hot-reloadable through ./tuning.json, see TUNING.md
+            th1 = get_tuning('state_th1', 0.5)
+            th2 = get_tuning('state_th2', 0.5)
+            print("State 1 prob: {:.4f}, State 2 prob: {:.4f} (th1={:.2f}, th2={:.2f})".format(
+                state_1.item(), state_2.item(), th1, th2))
+            if state_2 > th2:
                 return None, outputs['past_key_values'], 'el', None
-            if state_1 > 0.5:
+            if state_1 > th1:
                 return None, outputs['past_key_values'], 'ss', None
             return None, outputs['past_key_values'], 'cl', None
 

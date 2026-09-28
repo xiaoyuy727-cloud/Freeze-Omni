@@ -1,0 +1,7 @@
+{
+  "state_th1": 0.5,
+  "state_th2": 0.5,
+  "vad_threshold": 0.8,
+  "vad_min_silence_ms": 2000,
+  "vad_speech_pad_ms": 30
+}

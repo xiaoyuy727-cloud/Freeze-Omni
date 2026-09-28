@@ -1,0 +1,18 @@
+Namespace(model_path='./checkpoints', llm_path='./Qwen2-7B-Instruct', top_k=20, top_p=0.8, temperature=0.8, ip='127.0.0.1', port='8081', max_users=1, llm_exec_nums=1, timeout=600)
+[2026-09-28 18:08:38.079] the number of speech encoder params: 341.3681640625M
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 15.94it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 18.70it/s]
+/root/miniconda3/envs/freeze-omni/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+[2026-09-28 18:08:38.897] Checkpoint: loading from checkpoint ./checkpoints/audiollm/final.pt for GPU
+[2026-09-28 18:08:42.977] reading a config file from ./checkpoints/decoder/model.json
+[2026-09-28 18:08:46.798] Removing weight norm...
+[2026-09-28 18:08:46.802] Removing weight norm...
+[2026-09-28 18:08:46.835] Start Freeze-Omni sever
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on https://127.0.0.1:8081
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [28/Sep/2026 18:10:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 18:10:10] "GET /static/socket.io.min.js HTTP/1.1" 200 -

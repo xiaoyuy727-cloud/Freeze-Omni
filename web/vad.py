@@ -11,6 +11,15 @@ import torchaudio.compliance.kaldi as k
 from silero_vad.model import load_silero_vad
 from silero_vad.utils_vad import VADIterator
 
+try:
+    from tuning import get as get_tuning
+except ImportError:  # fall back to the original hard-coded values if ./ is not on PYTHONPATH
+    print("[tuning] WARNING: tuning.json is NOT active (PYTHONPATH must include "
+          "the repo root); using hard-coded defaults")
+
+    def get_tuning(key, default=None):
+        return default
+
 class VAD:
     def __init__(self, cache_history=10):
         self.chunk_size = 16
@@ -33,13 +42,35 @@ class VAD:
     def load_vad(self):
         self.vad_model = load_silero_vad()
         self.vad_model.eval()
+        self.vad_iterator = None
+        self.vad_params = None
         # generate vad itertator
-        self.vad_iterator = VADIterator(self.vad_model, 
-                                        threshold=0.8, 
-                                        sampling_rate=16000, 
-                                        min_silence_duration_ms=2000, 
-                                        speech_pad_ms=30)
-        self.vad_iterator.reset_states()
+        self.build_vad_iterator()
+
+    def build_vad_iterator(self):
+        # parameters are hot-reloadable through ./tuning.json, see TUNING.md
+        params = dict(threshold=get_tuning('vad_threshold', 0.8),
+                      min_silence_duration_ms=int(get_tuning('vad_min_silence_ms', 2000)),
+                      speech_pad_ms=int(get_tuning('vad_speech_pad_ms', 30)))
+        if params == self.vad_params:
+            return
+        try:
+            iterator = VADIterator(self.vad_model,
+                                   threshold=params['threshold'],
+                                   sampling_rate=16000,
+                                   min_silence_duration_ms=params['min_silence_duration_ms'],
+                                   speech_pad_ms=params['speech_pad_ms'])
+            iterator.reset_states()
+        except Exception as e:
+            # a bad value in tuning.json must never kill a live dialogue
+            print("[vad] rebuild failed, keeping previous params %s: %s" % (self.vad_params, e))
+            if self.vad_iterator is None:
+                raise
+            return
+        self.vad_iterator = iterator
+        self.vad_params = params
+        print("[vad] params now: threshold=%.2f, min_silence=%dms, speech_pad=%dms"
+              % (params['threshold'], params['min_silence_duration_ms'], params['speech_pad_ms']))
 
     def reset_vad(self):
         # reset all parms
@@ -84,6 +115,8 @@ class VAD:
 
         return_dict = {}
         return_dict['status'] = None
+        # pick up any tuning.json edit before this chunk is judged
+        self.build_vad_iterator()
         with torch.no_grad():
             # get fbank feature
             audio = torch.tensor(audio)

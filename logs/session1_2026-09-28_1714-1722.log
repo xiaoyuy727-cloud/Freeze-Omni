@@ -1,0 +1,2212 @@
+Namespace(model_path='./checkpoints', llm_path='./Qwen2-7B-Instruct', top_k=20, top_p=0.8, temperature=0.8, ip='127.0.0.1', port='8081', max_users=1, llm_exec_nums=1, timeout=600)
+[2026-09-28 12:09:26.206] the number of speech encoder params: 341.3681640625M
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00, 17.41it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 20.17it/s]
+/root/miniconda3/envs/freeze-omni/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+[2026-09-28 12:09:27.104] Checkpoint: loading from checkpoint ./checkpoints/audiollm/final.pt for GPU
+[2026-09-28 12:09:31.801] reading a config file from ./checkpoints/decoder/model.json
+[2026-09-28 12:09:34.963] Removing weight norm...
+[2026-09-28 12:09:34.966] Removing weight norm...
+[2026-09-28 12:09:34.993] Start Freeze-Omni sever
+ * Serving Flask app 'server'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on https://127.0.0.1:8081
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [28/Sep/2026 12:10:46] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 12:10:46] "GET /static/socket.io.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 17:14:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 17:14:27] "GET /static/socket.io.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 17:14:27] "GET /socket.io/?EIO=4&transport=polling&t=16t6mci2 HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 17:14:28] "GET /socket.io/?EIO=4&transport=polling&t=16tsk0sc&sid=657qDyJ6tPIUsdDFAAAA HTTP/1.1" 200 -
+127.0.0.1 - - [28/Sep/2026 17:14:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+/root/autodl-tmp/timing/Freeze-Omni/models/audioLLM.py:424: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  prob = F.softmax(state_logits[:, :-1])
+127.0.0.1 - - [28/Sep/2026 17:14:29] "POST /socket.io/?EIO=4&transport=polling&t=16tsjdt6&sid=657qDyJ6tPIUsdDFAAAA HTTP/1.1" 200 -
+We detected that you are passing `past_key_values` as a tuple of tuples. This is deprecated and will be removed in v4.47. Please convert your cache or use an appropriate `Cache` class (https://huggingface.co/docs/transformers/kv_cache#legacy-cache-format)
+[2026-09-28 17:14:29.509] [tuning] reloaded: {'state_th1': 0.5, 'state_th2': 0.5, 'vad_threshold': 0.8, 'vad_min_silence_ms': 2000, 'vad_speech_pad_ms': 30} (was: {})
+[2026-09-28 17:14:29.509] State 1 prob: 0.6329, State 2 prob: 0.0009 (th1=0.50, th2=0.50)
+[2026-09-28 17:14:29.584] [vad] params now: threshold=0.80, min_silence=2000ms, speech_pad=30ms
+[2026-09-28 17:14:29.587] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Start listening
+[2026-09-28 17:14:29.587] TTS Object 0 is in use: True
+[2026-09-28 17:14:29.587] Pipeline Object 0 user count: 1
+[2026-09-28 17:14:29.587] User dLJ4Ay4gxyPzNtGGAAAB connected
+[2026-09-28 17:16:32.208] Recording started
+[2026-09-28 17:16:32.357] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:32.520] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:32.677] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:32.833] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:32.997] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.173] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.328] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.475] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.642] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.807] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:33.953] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.142] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.281] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.508] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.608] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.793] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.988] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:34.993] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:16:35.226] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.282] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.329] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.386] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.433] State 1 prob: 0.0002, State 2 prob: 0.0004 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.493] State 1 prob: 0.0000, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.546] State 1 prob: 0.0006, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.557] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.615] State 1 prob: 0.0004, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.626] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.688] State 1 prob: 0.0005, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.698] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.774] State 1 prob: 0.0020, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.787] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.844] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.854] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.910] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:35.921] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:35.980] State 1 prob: 0.0049, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.041] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.100] State 1 prob: 0.0022, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.192] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.248] State 1 prob: 0.0082, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.359] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.413] State 1 prob: 0.0036, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.545] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.599] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.732] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.785] State 1 prob: 0.0005, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:36.836] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:36.887] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.075] State 1 prob: 0.0005, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.218] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.272] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.322] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.377] State 1 prob: 0.0006, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.500] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.552] State 1 prob: 0.0189, State 2 prob: 0.0062 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.757] State 1 prob: 0.0055, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.809] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:37.864] State 1 prob: 0.0071, State 2 prob: 0.0004 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:37.996] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.052] State 1 prob: 0.3797, State 2 prob: 0.0418 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.185] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.234] State 1 prob: 0.0481, State 2 prob: 0.0015 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.284] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.337] State 1 prob: 0.2075, State 2 prob: 0.0025 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.489] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.541] State 1 prob: 0.0968, State 2 prob: 0.0135 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.672] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.726] State 1 prob: 0.0724, State 2 prob: 0.0031 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.776] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:38.824] State 1 prob: 0.0231, State 2 prob: 0.0039 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:38.957] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.015] State 1 prob: 0.0494, State 2 prob: 0.0039 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:39.166] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.218] State 1 prob: 0.0086, State 2 prob: 0.0011 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:39.258] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.309] State 1 prob: 0.0004, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:39.390] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.445] State 1 prob: 0.0020, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:39.617] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.674] State 1 prob: 0.0286, State 2 prob: 0.0176 (th1=0.50, th2=0.50)
+[2026-09-28 17:16:39.714] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:39.720] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect vad time out
+[2026-09-28 17:16:39.921] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:40.109] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:40.205] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:40.401] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:40.508] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:40.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB 127.0.0.1 - - [28/Sep/2026 17:17:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ Received PCM data:  2560
+[2026-09-28 17:16:40.891] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.007] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.173] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.379] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.472] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.668] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.874] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:41.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.147] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.323] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.440] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.646] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.834] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:42.923] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.119] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.254] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.442] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.548] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.744] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:43.921] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:16:44.143] Recording stopped
+[2026-09-28 17:17:04.011] State 1 prob: 0.9530, State 2 prob: 0.0019 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:04.011] Sid:  dLJ4Ay4gxyPzNtGGAAAB Prompt set as:  你是一个日程规划小助手，帮我一起规划日程吧
+[2026-09-28 17:17:08.530] Recording started
+[2026-09-28 17:17:08.778] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:08.876] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.075] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.174] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.360] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.488] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.735] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.850] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:09.855] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:17:09.904] State 1 prob: 0.0003, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:09.949] State 1 prob: 0.0000, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:09.994] State 1 prob: 0.0001, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.038] State 1 prob: 0.0004, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.081] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.122] State 1 prob: 0.0015, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.171] State 1 prob: 0.0152, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.181] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.229] State 1 prob: 0.0471, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.239] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.284] State 1 prob: 0.0091, State 2 prob: 0.0009 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.334] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.383] State 1 prob: 0.0756, State 2 prob: 0.0039 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.443] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.491] State 1 prob: 0.3707, State 2 prob: 0.0059 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.623] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.672] State 1 prob: 0.0073, State 2 prob: 0.0009 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.834] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.883] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:10.923] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:10.970] State 1 prob: 0.0062, State 2 prob: 0.0012 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.091] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.141] State 1 prob: 0.0020, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.242] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.292] State 1 prob: 0.0015, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.545] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.598] State 1 prob: 0.0021, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.608] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.660] State 1 prob: 0.0680, State 2 prob: 0.0036 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.782] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.835] State 1 prob: 0.0008, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:11.936] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:11.983] State 1 prob: 0.0005, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:12.035] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.084] State 1 prob: 0.0141, State 2 prob: 0.0418 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:12.428] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.481] State 1 prob: 0.6855, State 2 prob: 0.0031 (th1=0.50, th2=0.50)
+[2026-09-28 17:17:12.501] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:17:12.519] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.537] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.712] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.901] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:12.999] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:13.038] Synthesis:  ['当然可以！我很高兴能帮助你规划日程。']
+[2026-09-28 17:17:13.039] Starting TTS...
+[2026-09-28 17:17:13.200] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:13.379] Codec Done
+[2026-09-28 17:17:13.386] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:13.398] Do not need to split
+[2026-09-28 17:17:13.404] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:17:13.493] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:17:13.607] Codec Done
+[2026-09-28 17:17:13.629] Recording stopped
+[2026-09-28 17:19:17.063] Recording started
+[2026-09-28 17:19:17.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:17.883] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:18.169] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:18.217] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:18.584] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:18.870] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:18.895] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:19.054] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:19.068] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:19.295] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:19.692] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:19.969] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:20.074] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:20.359] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:21.042] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:21.058] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:21.537] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:21.615] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:21.936] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.042] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.250] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.283] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.298] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.312] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.396] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.803] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.817] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:22.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.002] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.016] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.093] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.107] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.184] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.198] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.202] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:19:23.250] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.298] State 1 prob: 0.0043, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.339] State 1 prob: 0.0012, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.390] State 1 prob: 0.0004, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.430] State 1 prob: 0.0007, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.481] State 1 prob: 0.0063, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.522] State 1 prob: 0.0007, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.532] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.586] State 1 prob: 0.0004, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.596] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.642] State 1 prob: 0.0016, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.763] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.812] State 1 prob: 0.0060, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.822] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:23.876] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:23.956] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.002] State 1 prob: 0.0019, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.174] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.221] State 1 prob: 0.0008, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.241] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.289] State 1 prob: 0.0025, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.491] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.549] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.640] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.687] State 1 prob: 0.0057, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.738] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:24.790] State 1 prob: 0.0380, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:24.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.039] State 1 prob: 0.8624, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:25.059] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:19:25.076] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.222] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.363] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.383] Synthesis:  ['当然，我很乐意帮助你规划日程。']
+[2026-09-28 17:19:25.383] Starting TTS...
+[2026-09-28 17:19:25.590] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.642] Codec Done
+[2026-09-28 17:19:25.645] Do not need to split
+[2026-09-28 17:19:25.647] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:25.680] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.846] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:25.851] Codec Done
+[2026-09-28 17:19:25.855] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:25.925] Codec Done
+[2026-09-28 17:19:25.972] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:25.991] Codec Done
+[2026-09-28 17:19:25.996] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:26.003] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.062] Codec Done
+[2026-09-28 17:19:26.067] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:26.129] Codec Done
+[2026-09-28 17:19:26.144] Codec Done
+[2026-09-28 17:19:26.209] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:26.276] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:26.290] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.401] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.531] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.781] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.873] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:26.885] Synthesis:  ['首先，我们需要了解你的一天大致是如何安排的，包括工作，学习，休息和娱乐时间。']
+[2026-09-28 17:19:26.886] Starting TTS...
+[2026-09-28 17:19:26.979] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:27.150] Codec Done
+[2026-09-28 17:19:27.156] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:27.174] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:27.352] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:27.388] Codec Done
+[2026-09-28 17:19:27.502] Codec Done
+[2026-09-28 17:19:27.602] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:27.625] Codec Done
+[2026-09-28 17:19:27.740] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:27.759] Codec Done
+[2026-09-28 17:19:27.874] Codec Done
+[2026-09-28 17:19:27.988] Codec Done
+[2026-09-28 17:19:28.001] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:28.001] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.025] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.100] Codec Done
+[2026-09-28 17:19:28.143] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.330] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:28.434] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.523] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.915] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.931] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:28.937] Synthesis:  ['请提供一些基本信息，比如你每天有多少小时可以用于工作或学习，你希望如何分配时间给不同的活动。']
+[2026-09-28 17:19:28.938] Starting TTS...
+[2026-09-28 17:19:29.086] Codec Done
+[2026-09-28 17:19:29.207] Codec Done
+[2026-09-28 17:19:29.234] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:29.301] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:29.334] Codec Done
+[2026-09-28 17:19:29.408] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:29.453] Codec Done
+[2026-09-28 17:19:29.511] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:29.575] Codec Done
+[2026-09-28 17:19:29.618] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:29.708] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:29.709] Codec Done
+[2026-09-28 17:19:29.824] Codec Done
+[2026-09-28 17:19:29.831] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:29.905] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:29.956] Codec Done
+[2026-09-28 17:19:30.002] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.073] Codec Done
+[2026-09-28 17:19:30.079] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.270] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:30.288] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.450] Synthesis:  ['以及你是否有固定的休息时间和娱乐时间。']
+[2026-09-28 17:19:30.451] Starting TTS...
+[2026-09-28 17:19:30.498] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.614] Codec Done
+[2026-09-28 17:19:30.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.743] Codec Done
+[2026-09-28 17:19:30.755] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:30.764] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.845] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:30.882] Codec Done
+[2026-09-28 17:19:30.961] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:30.971] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.009] Codec Done
+[2026-09-28 17:19:31.045] Codec Done
+[2026-09-28 17:19:31.048] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:31.058] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.153] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.239] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:31.332] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.545] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.561] Synthesis:  ['这样，我们可以更精确地为你制定一个日程规划。']
+[2026-09-28 17:19:31.562] Starting TTS...
+[2026-09-28 17:19:31.661] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.724] Codec Done
+[2026-09-28 17:19:31.731] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:31.838] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.854] Codec Done
+[2026-09-28 17:19:31.933] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:31.978] Codec Done
+[2026-09-28 17:19:32.100] Codec Done
+[2026-09-28 17:19:32.116] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:32.131] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:32.134] Codec Done
+[2026-09-28 17:19:32.311] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:32.321] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:32.433] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:32.657] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:32.719] Synthesis:  ['以下是一个基本的日程规划框架，你可以根据自己的具体情况进行调整。']
+[2026-09-28 17:19:32.720] Starting TTS...
+[2026-09-28 17:19:32.805] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:32.878] Codec Done
+[2026-09-28 17:19:32.903] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:33.009] Codec Done
+[2026-09-28 17:19:33.091] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:33.132] Codec Done
+[2026-09-28 17:19:33.191] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:33.256] Codec Done
+[2026-09-28 17:19:33.298] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:33.380] Codec Done
+[2026-09-28 17:19:33.383] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:33.394] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:33.499] Codec Done
+[2026-09-28 17:19:33.581] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:33.588] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:19:33.679] State 1 prob: 0.0479, State 2 prob: 0.0117 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:33.684] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:33.772] State 1 prob: 0.0063, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:33.871] State 1 prob: 0.0246, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:33.971] State 1 prob: 0.0066, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.055] State 1 prob: 0.0178, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.153] State 1 prob: 0.0028, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.249] State 1 prob: 0.0018, State 2 prob: 0.0054 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.260] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.362] State 1 prob: 0.0098, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.373] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.465] State 1 prob: 0.0138, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.476] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.576] State 1 prob: 0.0896, State 2 prob: 0.0060 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.587] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.687] State 1 prob: 0.0253, State 2 prob: 0.0025 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.698] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.798] State 1 prob: 0.0376, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.809] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.881] Synthesis:  ['### 实际上午，8:00，这是英文原文中的选项，可能是打字错误。']
+[2026-09-28 17:19:34.881] Starting TTS...
+[2026-09-28 17:19:34.905] State 1 prob: 0.0141, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:34.916] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:34.997] State 1 prob: 0.0006, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.008] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.086] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.096] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.155] Codec Done
+[2026-09-28 17:19:35.167] State 1 prob: 0.0014, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.189] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.269] State 1 prob: 0.0035, State 2 prob: 0.0055 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.291] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.363] State 1 prob: 0.0236, State 2 prob: 0.0036 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.370] Codec Done
+[2026-09-28 17:19:35.456] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:35.466] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.522] Codec Done
+[2026-09-28 17:19:35.541] State 1 prob: 0.0186, State 2 prob: 0.0046 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.652] Codec Done
+[2026-09-28 17:19:35.679] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:35.684] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.769] State 1 prob: 0.0688, State 2 prob: 0.1032 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.780] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:35.859] State 1 prob: 0.0894, State 2 prob: 0.3985 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:35.863] Codec Done
+[2026-09-28 17:19:35.945] Codec Done
+[2026-09-28 17:19:35.990] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:36.001] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.057] State 1 prob: 0.4676, State 2 prob: 0.2209 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:36.141] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:36.151] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.255] State 1 prob: 0.6663, State 2 prob: 0.2232 (th1=0.50, th2=0.50)
+[2026-09-28 17:19:36.286] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:19:36.303] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.449] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.618] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.671] Synthesis:  ['那我们可以从以下几个方面来考虑你的日程规划。']
+[2026-09-28 17:19:36.672] Starting TTS...
+[2026-09-28 17:19:36.724] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:36.897] Codec Done
+[2026-09-28 17:19:36.899] Do not need to split
+[2026-09-28 17:19:36.922] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:36.931] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.072] Codec Done
+[2026-09-28 17:19:37.134] Codec Done
+[2026-09-28 17:19:37.195] Codec Done
+[2026-09-28 17:19:37.204] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.210] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.217] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.231] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.246] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.279] Codec Done
+[2026-09-28 17:19:37.303] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.349] Codec Done
+[2026-09-28 17:19:37.353] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.362] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.416] Codec Done
+[2026-09-28 17:19:37.453] Codec Done
+[2026-09-28 17:19:37.474] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.559] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.649] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:37.743] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:37.821] Synthesis:  ['1：工作/学习时间。']
+[2026-09-28 17:19:37.822] Starting TTS...
+[2026-09-28 17:19:37.853] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.049] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.090] Codec Done
+[2026-09-28 17:19:38.134] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:38.205] Codec Done
+[2026-09-28 17:19:38.226] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.323] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:38.343] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.529] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.664] Synthesis:  ['假设你每天有8小时可以用于工作或学习。']
+[2026-09-28 17:19:38.665] Starting TTS...
+[2026-09-28 17:19:38.718] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.829] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:38.830] Codec Done
+[2026-09-28 17:19:39.017] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.054] Codec Done
+[2026-09-28 17:19:39.116] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.180] Codec Done
+[2026-09-28 17:19:39.270] Codec Done
+[2026-09-28 17:19:39.306] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:39.316] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.506] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.614] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.775] Synthesis:  ['你可以将这8小时分为几个时间段，每个时间段专注于一个任务或项目。']
+[2026-09-28 17:19:39.775] Starting TTS...
+[2026-09-28 17:19:39.835] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:39.940] Codec Done
+[2026-09-28 17:19:40.003] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.062] Codec Done
+[2026-09-28 17:19:40.074] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:40.088] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.195] Codec Done
+[2026-09-28 17:19:40.279] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:40.286] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.321] Codec Done
+[2026-09-28 17:19:40.442] Codec Done
+[2026-09-28 17:19:40.475] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.565] Codec Done
+[2026-09-28 17:19:40.573] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:40.587] Codec Done
+[2026-09-28 17:19:40.592] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.774] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:40.782] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:40.978] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.060] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.271] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.371] Synthesis:  ['例如，你可以设置每天早上9点到11点用于处理邮件，规划任务和进行会议。']
+[2026-09-28 17:19:41.371] Starting TTS...
+[2026-09-28 17:19:41.452] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.534] Codec Done
+[2026-09-28 17:19:41.608] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.663] Codec Done
+[2026-09-28 17:19:41.775] Codec Done
+[2026-09-28 17:19:41.887] Codec Done
+[2026-09-28 17:19:41.928] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:41.944] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.008] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.029] Codec Done
+[2026-09-28 17:19:42.033] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:42.153] Codec Done
+[2026-09-28 17:19:42.175] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.272] Codec Done
+[2026-09-28 17:19:42.312] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:42.323] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.536] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.722] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:42.826] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.018] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.045] Synthesis:  ['下午2点到4点用于深入研究或撰写报告，其余时间用于完成具体任务或学习新技能。']
+[2026-09-28 17:19:43.046] Starting TTS...
+[2026-09-28 17:19:43.126] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.207] Codec Done
+[2026-09-28 17:19:43.325] Codec Done
+[2026-09-28 17:19:43.364] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.453] Codec Done
+[2026-09-28 17:19:43.510] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.580] Codec Done
+[2026-09-28 17:19:43.599] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:43.616] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.710] Codec Done
+[2026-09-28 17:19:43.761] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:43.835] Codec Done
+[2026-09-28 17:19:43.958] Codec Done
+[2026-09-28 17:19:43.962] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:43.969] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.060] Codec Done
+[2026-09-28 17:19:44.378] Synthesis:  ['2：休息时间。']
+[2026-09-28 17:19:44.379] Starting TTS...
+[2026-09-28 17:19:44.527] Codec Done
+[2026-09-28 17:19:44.617] Codec Done
+[2026-09-28 17:19:44.640] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:44.641] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:44.655] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.694] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.706] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.719] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.753] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:44.761] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:44.972] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.049] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.111] Synthesis:  ['确保每天都有足够的时间休息和放松。']
+[2026-09-28 17:19:45.111] Starting TTS...
+[2026-09-28 17:19:45.266] Codec Done
+[2026-09-28 17:19:45.269] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:45.287] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.396] Codec Done
+[2026-09-28 17:19:45.434] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.517] Codec Done
+[2026-09-28 17:19:45.522] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:45.529] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.572] Codec Done
+[2026-09-28 17:19:45.721] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:45.727] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:45.910] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.009] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.201] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.389] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.504] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.690] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.775] Synthesis:  ['这可以包括短暂的休息，比如每工作45分钟休息5分钟，和更长的休息时间，如午餐时间或下午茶时间，。']
+[2026-09-28 17:19:46.776] Starting TTS...
+[2026-09-28 17:19:46.890] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:46.940] Codec Done
+[2026-09-28 17:19:46.969] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:46.985] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:47.071] Codec Done
+[2026-09-28 17:19:47.075] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:47.183] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:47.197] Codec Done
+[2026-09-28 17:19:47.271] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:47.317] Codec Done
+[2026-09-28 17:19:47.436] Codec Done
+[2026-09-28 17:19:47.549] Codec Done
+[2026-09-28 17:19:47.604] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:47.659] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:47.681] Codec Done
+[2026-09-28 17:19:47.749] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:47.801] Codec Done
+[2026-09-28 17:19:47.919] Codec Done
+[2026-09-28 17:19:47.954] Codec Done
+[2026-09-28 17:19:47.967] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:48.050] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:48.151] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:48.317] Synthesis:  ['休息时间可以帮助你恢复精力，提高工作效率。']
+[2026-09-28 17:19:48.318] Starting TTS...
+[2026-09-28 17:19:48.449] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:48.480] Codec Done
+[2026-09-28 17:19:48.599] Codec Done
+[2026-09-28 17:19:48.646] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:48.719] Codec Done
+[2026-09-28 17:19:48.739] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:48.833] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:48.848] Codec Done
+[2026-09-28 17:19:48.864] Codec Done
+[2026-09-28 17:19:49.015] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:49.146] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:49.261] Synthesis:  ['3：锻炼和健康。']
+[2026-09-28 17:19:49.261] Starting TTS...
+[2026-09-28 17:19:49.318] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:49.422] Codec Done
+[2026-09-28 17:19:49.509] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:49.542] Codec Done
+[2026-09-28 17:19:49.554] Codec Done
+[2026-09-28 17:19:49.604] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:49.615] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:49.846] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:50.094] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:50.289] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:50.343] Synthesis:  ['每天至少安排30分钟的锻炼时间，可以是散步，跑步，瑜伽或其他你喜欢的运动。']
+[2026-09-28 17:19:50.344] Starting TTS...
+[2026-09-28 17:19:50.504] Codec Done
+[2026-09-28 17:19:50.578] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:50.624] Codec Done
+[2026-09-28 17:19:50.744] Codec Done
+[2026-09-28 17:19:50.786] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:50.869] Codec Done
+[2026-09-28 17:19:50.989] Codec Done
+[2026-09-28 17:19:51.008] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:51.013] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:51.131] Codec Done
+[2026-09-28 17:19:51.275] Codec Done
+[2026-09-28 17:19:51.328] Codec Done
+[2026-09-28 17:19:51.345] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:51.351] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:51.354] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:51.537] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:51.629] Synthesis:  ['健康的身体是高效工作的基础。']
+[2026-09-28 17:19:51.630] Starting TTS...
+[2026-09-28 17:19:51.801] Codec Done
+[2026-09-28 17:19:51.817] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:51.931] Codec Done
+[2026-09-28 17:19:52.026] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:52.039] Codec Done
+[2026-09-28 17:19:52.198] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:52.305] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:52.412] Synthesis:  ['4：个人时间。']
+[2026-09-28 17:19:52.413] Starting TTS...
+[2026-09-28 17:19:52.521] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:52.569] Codec Done
+[2026-09-28 17:19:52.593] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:52.693] Codec Done
+[2026-09-28 17:19:52.699] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:52.723] Codec Done
+[2026-09-28 17:19:52.787] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:52.909] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:53.003] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:53.288] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:53.487] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:53.551] Synthesis:  ['确保你有一段时间可以做自己喜欢的事情，如阅读，看电影，与朋友聚会等。']
+[2026-09-28 17:19:53.551] Starting TTS...
+[2026-09-28 17:19:53.709] Codec Done
+[2026-09-28 17:19:53.829] Codec Done
+[2026-09-28 17:19:53.837] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:53.852] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:53.967] Codec Done
+[2026-09-28 17:19:54.071] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:54.094] Codec Done
+[2026-09-28 17:19:54.146] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:54.221] Codec Done
+[2026-09-28 17:19:54.252] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:54.258] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:54.351] Codec Done
+[2026-09-28 17:19:54.353] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:54.479] Codec Done
+[2026-09-28 17:19:54.543] Codec Done
+[2026-09-28 17:19:54.557] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:54.565] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:54.732] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:54.746] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:54.974] Synthesis:  ['这有助于减轻压力，提高生活质量。']
+[2026-09-28 17:19:54.974] Starting TTS...
+[2026-09-28 17:19:55.126] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:55.138] Codec Done
+[2026-09-28 17:19:55.237] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:55.266] Codec Done
+[2026-09-28 17:19:55.313] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:55.390] Codec Done
+[2026-09-28 17:19:55.435] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:55.466] Codec Done
+[2026-09-28 17:19:55.600] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:55.716] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:55.895] Synthesis:  ['5：学习新技能。']
+[2026-09-28 17:19:55.896] Starting TTS...
+[2026-09-28 17:19:55.912] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:56.059] Codec Done
+[2026-09-28 17:19:56.090] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:56.185] Codec Done
+[2026-09-28 17:19:56.196] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:56.199] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:56.283] Codec Done
+[2026-09-28 17:19:56.399] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:56.479] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:56.676] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:56.919] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:57.177] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:57.372] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:57.463] Synthesis:  ['如果你有学习新技能的目标，可以安排每天固定的时间进行学习，比如每天晚上7点到9点。']
+[2026-09-28 17:19:57.464] Starting TTS...
+[2026-09-28 17:19:57.596] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:57.625] Codec Done
+[2026-09-28 17:19:57.748] Codec Done
+[2026-09-28 17:19:57.864] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:57.879] Codec Done
+[2026-09-28 17:19:58.000] Codec Done
+[2026-09-28 17:19:58.062] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:58.124] Codec Done
+[2026-09-28 17:19:58.141] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:58.245] Codec Done
+[2026-09-28 17:19:58.340] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:58.351] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:58.378] Codec Done
+[2026-09-28 17:19:58.448] Codec Done
+[2026-09-28 17:19:58.521] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:58.542] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:58.734] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:58.791] Synthesis:  ['6：反思和计划。']
+[2026-09-28 17:19:58.791] Starting TTS...
+[2026-09-28 17:19:58.822] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:58.960] Codec Done
+[2026-09-28 17:19:59.012] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:59.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.087] Codec Done
+[2026-09-28 17:19:59.131] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:59.139] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.162] Codec Done
+[2026-09-28 17:19:59.211] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:19:59.314] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.540] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.612] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.810] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:19:59.835] Synthesis:  ['每天结束前，花一些时间回顾今天完成的任务，计划明天的工作。']
+[2026-09-28 17:19:59.835] Starting TTS...
+[2026-09-28 17:19:59.997] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.003] Codec Done
+[2026-09-28 17:20:00.105] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.133] Codec Done
+[2026-09-28 17:20:00.250] Codec Done
+[2026-09-28 17:20:00.282] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:00.293] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.389] Codec Done
+[2026-09-28 17:20:00.506] Codec Done
+[2026-09-28 17:20:00.616] Codec Done
+[2026-09-28 17:20:00.681] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.708] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.762] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:00.793] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:00.967] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.087] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.211] Synthesis:  ['这有助于提高时间管理和任务优先级的意识。']
+[2026-09-28 17:20:01.211] Starting TTS...
+[2026-09-28 17:20:01.261] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.378] Codec Done
+[2026-09-28 17:20:01.459] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.507] Codec Done
+[2026-09-28 17:20:01.555] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.633] Codec Done
+[2026-09-28 17:20:01.752] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:01.767] Codec Done
+[2026-09-28 17:20:01.814] Codec Done
+[2026-09-28 17:20:01.937] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:01.942] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.053] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.225] Synthesis:  ['7：保持灵活性。']
+[2026-09-28 17:20:02.225] Starting TTS...
+[2026-09-28 17:20:02.295] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.398] Codec Done
+[2026-09-28 17:20:02.417] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:02.427] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.522] Codec Done
+[2026-09-28 17:20:02.533] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.619] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:02.720] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:02.924] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.036] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.209] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.410] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.451] Synthesis:  ['在规划日程时，留出一些缓冲时间，以应对不可预见的任务或紧急情况。']
+[2026-09-28 17:20:03.451] Starting TTS...
+[2026-09-28 17:20:03.497] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.619] Codec Done
+[2026-09-28 17:20:03.737] Codec Done
+[2026-09-28 17:20:03.791] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:03.805] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.820] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:03.874] Codec Done
+[2026-09-28 17:20:03.956] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.005] Codec Done
+[2026-09-28 17:20:04.020] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:04.133] Codec Done
+[2026-09-28 17:20:04.140] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:04.143] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.265] Codec Done
+[2026-09-28 17:20:04.320] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:04.330] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.382] Codec Done
+[2026-09-28 17:20:04.437] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:04.452] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.622] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:04.972] Synthesis:  ['同时，也要保持一定的灵活性，以便根据实际情况调整计划。']
+[2026-09-28 17:20:04.973] Starting TTS...
+[2026-09-28 17:20:04.984] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.112] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.143] Codec Done
+[2026-09-28 17:20:05.224] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:05.272] Codec Done
+[2026-09-28 17:20:05.298] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.407] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.411] Codec Done
+[2026-09-28 17:20:05.480] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:05.537] Codec Done
+[2026-09-28 17:20:05.603] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.665] Codec Done
+[2026-09-28 17:20:05.770] Codec Done
+[2026-09-28 17:20:05.779] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:05.791] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:05.882] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.083] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.271] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.380] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.564] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.668] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.790] Synthesis:  ['通过这样的日程规划，你可以更有效地管理时间，提高工作效率，同时保持生活和工作的平衡。']
+[2026-09-28 17:20:06.791] Starting TTS...
+[2026-09-28 17:20:06.852] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:06.955] Codec Done
+[2026-09-28 17:20:07.059] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.087] Codec Done
+[2026-09-28 17:20:07.144] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:07.155] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.224] Codec Done
+[2026-09-28 17:20:07.347] Codec Done
+[2026-09-28 17:20:07.352] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:07.363] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.483] Codec Done
+[2026-09-28 17:20:07.580] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.613] Codec Done
+[2026-09-28 17:20:07.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:07.665] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.741] Codec Done
+[2026-09-28 17:20:07.853] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:07.860] Codec Done
+[2026-09-28 17:20:08.058] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:08.073] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:08.078] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:20:08.242] State 1 prob: 0.0005, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.340] State 1 prob: 0.5070, State 2 prob: 0.1499 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.442] State 1 prob: 0.7852, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.555] State 1 prob: 0.0897, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.655] State 1 prob: 0.0172, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.754] State 1 prob: 0.0093, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.856] State 1 prob: 0.0298, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.871] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:08.977] State 1 prob: 0.3363, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:08.988] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.021] Synthesis:  ['希望这些建议能帮助你制定出适合自己的日程规划。']
+[2026-09-28 17:20:09.022] Starting TTS...
+[2026-09-28 17:20:09.075] State 1 prob: 0.8595, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:09.222] Codec Done
+[2026-09-28 17:20:09.348] Codec Done
+[2026-09-28 17:20:09.476] Codec Done
+[2026-09-28 17:20:09.608] Codec Done
+[2026-09-28 17:20:09.678] Codec Done
+[2026-09-28 17:20:09.815] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:20:09.833] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.850] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.866] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.886] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.900] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.914] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.930] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.944] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:09.974] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.079] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.099] Synthesis:  ['当然，我很乐意帮助你。']
+[2026-09-28 17:20:10.100] Starting TTS...
+[2026-09-28 17:20:10.277] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.345] Codec Done
+[2026-09-28 17:20:10.347] Do not need to split
+[2026-09-28 17:20:10.351] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:10.363] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.557] Codec Done
+[2026-09-28 17:20:10.563] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:10.580] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.642] Codec Done
+[2026-09-28 17:20:10.662] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:10.726] Codec Done
+[2026-09-28 17:20:10.740] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:10.747] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:10.809] Codec Done
+[2026-09-28 17:20:10.834] Codec Done
+[2026-09-28 17:20:10.841] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:10.856] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.113] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:11.129] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.231] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.342] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.421] Synthesis:  ['首先，我们来聊聊你希望解决的问题或需要帮助的领域。']
+[2026-09-28 17:20:11.422] Starting TTS...
+[2026-09-28 17:20:11.540] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.690] Codec Done
+[2026-09-28 17:20:11.828] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:11.840] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.858] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:11.912] Codec Done
+[2026-09-28 17:20:12.035] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.043] Codec Done
+[2026-09-28 17:20:12.148] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:12.166] Codec Done
+[2026-09-28 17:20:12.212] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.261] Codec Done
+[2026-09-28 17:20:12.332] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.412] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:12.525] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.614] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.803] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:12.953] Synthesis:  ['无论是学习，工作，生活规划，还是其他任何方面，都可以告诉我具体的情况和需求。']
+[2026-09-28 17:20:12.953] Starting TTS...
+[2026-09-28 17:20:13.035] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.092] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.128] Codec Done
+[2026-09-28 17:20:13.247] Codec Done
+[2026-09-28 17:20:13.348] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:13.361] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.376] Codec Done
+[2026-09-28 17:20:13.378] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:13.478] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.504] Codec Done
+[2026-09-28 17:20:13.583] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.628] Codec Done
+[2026-09-28 17:20:13.665] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:13.750] Codec Done
+[2026-09-28 17:20:13.780] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:13.791] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:13.885] Codec Done
+[2026-09-28 17:20:13.954] Codec Done
+[2026-09-28 17:20:13.987] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.351] Synthesis:  ['这样我才能提供更精确和有效的帮助。']
+[2026-09-28 17:20:14.352] Starting TTS...
+[2026-09-28 17:20:14.501] Codec Done
+[2026-09-28 17:20:14.615] Codec Done
+[2026-09-28 17:20:14.650] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:14.662] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.708] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.722] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.746] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:14.778] Codec Done
+[2026-09-28 17:20:14.834] Codec Done
+[2026-09-28 17:20:14.944] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:14.954] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.040] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.227] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.345] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.530] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.714] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:15.820] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.017] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.214] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.310] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.496] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.681] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.806] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:16.982] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.180] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.278] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.433] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.598] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.795] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:17.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.080] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.326] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.452] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.458] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:20:18.513] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.566] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.608] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.649] State 1 prob: 0.0003, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.695] State 1 prob: 0.0004, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.737] State 1 prob: 0.0003, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.790] State 1 prob: 0.0006, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.800] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.852] State 1 prob: 0.0022, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.862] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.907] State 1 prob: 0.0012, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:18.938] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:18.988] State 1 prob: 0.0027, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.160] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.211] State 1 prob: 0.0313, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.241] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.292] State 1 prob: 0.0425, State 2 prob: 0.0006 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.525] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.581] State 1 prob: 0.0125, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.592] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.645] State 1 prob: 0.0086, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.726] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.775] State 1 prob: 0.0976, State 2 prob: 0.0009 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:19.836] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:19.887] State 1 prob: 0.0055, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.018] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.068] State 1 prob: 0.0155, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.209] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.260] State 1 prob: 0.0058, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.322] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.370] State 1 prob: 0.0062, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.502] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.552] State 1 prob: 0.0202, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.703] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.753] State 1 prob: 0.5736, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:20.773] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:20:20.801] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:20.989] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.008] Synthesis:  ['当然，我理解你的需求。']
+[2026-09-28 17:20:21.009] Starting TTS...
+[2026-09-28 17:20:21.176] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.263] Codec Done
+[2026-09-28 17:20:21.266] Do not need to split
+[2026-09-28 17:20:21.268] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.285] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.479] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.481] Codec Done
+[2026-09-28 17:20:21.556] Codec Done
+[2026-09-28 17:20:21.560] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.567] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.640] Codec Done
+[2026-09-28 17:20:21.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.656] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.725] Codec Done
+[2026-09-28 17:20:21.753] Codec Done
+[2026-09-28 17:20:21.764] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.772] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:21.952] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:21.967] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.154] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.254] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.437] Synthesis:  ['在接下来的时间里，我会尽量避免打断你，让你能集中思考和表达。']
+[2026-09-28 17:20:22.438] Starting TTS...
+[2026-09-28 17:20:22.441] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.548] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.744] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:22.758] Codec Done
+[2026-09-28 17:20:22.940] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.035] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.041] Codec Done
+[2026-09-28 17:20:23.059] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:23.190] Codec Done
+[2026-09-28 17:20:23.315] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.339] Codec Done
+[2026-09-28 17:20:23.413] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:23.425] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.491] Codec Done
+[2026-09-28 17:20:23.532] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.613] Codec Done
+[2026-09-28 17:20:23.749] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:23.759] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:23.907] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.078] Synthesis:  ['如果你有任何问题或需要帮助，随时告诉我。']
+[2026-09-28 17:20:24.079] Starting TTS...
+[2026-09-28 17:20:24.155] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.200] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.281] Codec Done
+[2026-09-28 17:20:24.389] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.431] Codec Done
+[2026-09-28 17:20:24.474] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:24.495] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.587] Codec Done
+[2026-09-28 17:20:24.591] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:24.681] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.737] Codec Done
+[2026-09-28 17:20:24.761] Codec Done
+[2026-09-28 17:20:24.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:24.959] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:24.974] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:24.995] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.085] Synthesis:  ['我会倾听并提供支持。']
+[2026-09-28 17:20:25.085] Starting TTS...
+[2026-09-28 17:20:25.270] Codec Done
+[2026-09-28 17:20:25.275] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:25.285] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.353] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.434] Codec Done
+[2026-09-28 17:20:25.466] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.479] Codec Done
+[2026-09-28 17:20:25.760] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:25.777] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.789] Synthesis:  ['请开始你的分享或需要帮助的部分。']
+[2026-09-28 17:20:25.789] Starting TTS...
+[2026-09-28 17:20:25.854] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:25.954] Codec Done
+[2026-09-28 17:20:26.055] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.088] Codec Done
+[2026-09-28 17:20:26.141] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.213] Codec Done
+[2026-09-28 17:20:26.226] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:26.243] Codec Done
+[2026-09-28 17:20:26.258] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.473] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:26.486] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.623] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.832] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:26.920] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.276] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.300] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.416] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.602] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.698] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:27.894] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.072] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.179] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.375] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.561] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.669] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:28.826] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.073] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.183] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.511] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.538] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.867] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:29.945] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.154] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.262] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.469] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.679] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.771] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:30.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.130] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.255] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.413] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.539] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.756] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:31.861] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.028] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.183] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.339] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.526] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.664] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.821] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:32.979] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.135] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.302] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.469] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.665] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.779] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:33.945] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:34.100] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:34.268] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:34.454] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:34.620] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:34.958] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.119] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.139] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.426] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.445] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.651] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.749] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:35.925] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.040] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.234] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.421] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.521] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.676] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:36.893] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.185] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.372] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.479] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.665] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.791] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:37.967] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:38.154] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:38.350] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:38.449] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:38.636] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:38.842] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:39.058] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:39.336] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:39.536] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:39.743] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:40.030] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:40.227] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:40.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:40.725] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:40.990] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:41.197] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:41.415] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:41.651] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:41.867] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.094] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.201] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.377] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.584] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.681] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:42.886] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.062] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.158] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.446] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.482] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.488] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:20:43.548] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.597] State 1 prob: 0.0001, State 2 prob: 0.0006 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.639] State 1 prob: 0.0136, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.688] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.731] State 1 prob: 0.0063, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.774] State 1 prob: 0.0046, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.820] State 1 prob: 0.0026, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.831] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.888] State 1 prob: 0.0013, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:43.899] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:43.946] State 1 prob: 0.0708, State 2 prob: 0.0043 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.248] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.304] State 1 prob: 0.0250, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.314] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.361] State 1 prob: 0.1666, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.372] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.418] State 1 prob: 0.0057, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.571] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.621] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.855] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.910] State 1 prob: 0.0008, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:44.921] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:44.967] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:45.855] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:45.902] State 1 prob: 0.0091, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.086] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.135] State 1 prob: 0.0000, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.247] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.308] State 1 prob: 0.0048, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.318] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.365] State 1 prob: 0.0027, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.477] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.561] State 1 prob: 0.0384, State 2 prob: 0.0006 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.572] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.645] State 1 prob: 0.0012, State 2 prob: 0.0008 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.655] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.710] State 1 prob: 0.0298, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.721] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.769] State 1 prob: 0.0061, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.779] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.837] State 1 prob: 0.2627, State 2 prob: 0.0006 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.849] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.904] State 1 prob: 0.1147, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.914] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:46.973] State 1 prob: 0.0208, State 2 prob: 0.0019 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:46.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.037] State 1 prob: 0.0013, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.047] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.096] State 1 prob: 0.0037, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.106] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.162] State 1 prob: 0.0003, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.172] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.225] State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.316] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.367] State 1 prob: 0.0003, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.510] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.561] State 1 prob: 0.0008, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.712] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.770] State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:47.811] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:47.859] State 1 prob: 0.0006, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.001] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.050] State 1 prob: 0.0011, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.194] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.242] State 1 prob: 0.0202, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.295] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.346] State 1 prob: 0.0008, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.508] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.557] State 1 prob: 0.0429, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.719] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.769] State 1 prob: 0.0027, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:48.800] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:48.846] State 1 prob: 0.0185, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.007] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.056] State 1 prob: 0.0677, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.097] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.148] State 1 prob: 0.1015, State 2 prob: 0.0012 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.280] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.331] State 1 prob: 0.2480, State 2 prob: 0.0007 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.473] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.527] State 1 prob: 0.2492, State 2 prob: 0.0030 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.578] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.627] State 1 prob: 0.0028, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:49.780] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:49.829] State 1 prob: 0.3708, State 2 prob: 0.0081 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.076] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.127] State 1 prob: 0.2452, State 2 prob: 0.0111 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.137] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.185] State 1 prob: 0.1234, State 2 prob: 0.0461 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.266] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.314] State 1 prob: 0.0143, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.445] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.505] State 1 prob: 0.0153, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.748] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.824] State 1 prob: 0.0158, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.839] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.898] State 1 prob: 0.0009, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:50.909] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:50.958] State 1 prob: 0.0091, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.050] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.100] State 1 prob: 0.0043, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.221] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.272] State 1 prob: 0.0311, State 2 prob: 0.0012 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.414] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.471] State 1 prob: 0.0194, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.513] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.570] State 1 prob: 0.0906, State 2 prob: 0.0084 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.722] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.774] State 1 prob: 0.3606, State 2 prob: 0.0115 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:51.805] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:51.854] State 1 prob: 0.4806, State 2 prob: 0.1980 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:52.006] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.058] State 1 prob: 0.7544, State 2 prob: 0.1005 (th1=0.50, th2=0.50)
+[2026-09-28 17:20:52.078] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:20:52.248] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.298] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.472] Synthesis:  ['听起来你对明天的作业安排有明确的计划。']
+[2026-09-28 17:20:52.473] Starting TTS...
+[2026-09-28 17:20:52.494] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.680] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.739] Codec Done
+[2026-09-28 17:20:52.741] Do not need to split
+[2026-09-28 17:20:52.768] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:52.776] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:52.948] Codec Done
+[2026-09-28 17:20:53.023] Codec Done
+[2026-09-28 17:20:53.041] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.041] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.054] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:53.120] Codec Done
+[2026-09-28 17:20:53.128] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.130] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:53.207] Codec Done
+[2026-09-28 17:20:53.282] Codec Done
+[2026-09-28 17:20:53.356] Codec Done
+[2026-09-28 17:20:53.380] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.382] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.384] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.392] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:53.400] Codec Done
+[2026-09-28 17:20:53.458] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:53.586] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:53.593] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:53.806] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.005] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.065] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.092] Synthesis:  ['这很好！为了确保你能够高效完成作业，这里有一些建议。']
+[2026-09-28 17:20:54.093] Starting TTS...
+[2026-09-28 17:20:54.261] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.413] Codec Done
+[2026-09-28 17:20:54.434] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.541] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.692] Codec Done
+[2026-09-28 17:20:54.728] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.846] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:54.848] Codec Done
+[2026-09-28 17:20:55.002] Codec Done
+[2026-09-28 17:20:55.049] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:55.053] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:55.155] Codec Done
+[2026-09-28 17:20:55.227] Codec Done
+[2026-09-28 17:20:55.283] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:55.355] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:55.364] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:55.541] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:55.566] Synthesis:  ['1：时间管理。']
+[2026-09-28 17:20:55.567] Starting TTS...
+[2026-09-28 17:20:55.688] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:55.729] Codec Done
+[2026-09-28 17:20:55.745] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:55.852] Codec Done
+[2026-09-28 17:20:55.898] Codec Done
+[2026-09-28 17:20:56.043] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:56.047] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.072] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.138] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.428] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.509] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.552] Synthesis:  ['你可以将作业分解成小部分，为每一部分设定时间限制。']
+[2026-09-28 17:20:56.552] Starting TTS...
+[2026-09-28 17:20:56.633] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.709] Codec Done
+[2026-09-28 17:20:56.831] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:56.841] Codec Done
+[2026-09-28 17:20:56.964] Codec Done
+[2026-09-28 17:20:57.006] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:57.008] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.093] Codec Done
+[2026-09-28 17:20:57.195] Codec Done
+[2026-09-28 17:20:57.218] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.304] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.389] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:57.501] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.594] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.794] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:57.811] Synthesis:  ['例如，如果你的作业是关于数学模型的，你可以将时间分为。']
+[2026-09-28 17:20:57.811] Starting TTS...
+[2026-09-28 17:20:57.965] Codec Done
+[2026-09-28 17:20:58.020] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:58.073] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:58.094] Codec Done
+[2026-09-28 17:20:58.210] Codec Done
+[2026-09-28 17:20:58.289] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:58.334] Codec Done
+[2026-09-28 17:20:58.451] Codec Done
+[2026-09-28 17:20:58.508] Codec Done
+[2026-09-28 17:20:58.549] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:58.555] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:58.567] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:58.765] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:58.972] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:59.253] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:59.411] Synthesis:  ['理解题目，10分钟，，构思解决方案，20分钟，，执行计算，30分钟，，检查答案，10分钟，。']
+[2026-09-28 17:20:59.412] Starting TTS...
+[2026-09-28 17:20:59.455] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:59.575] Codec Done
+[2026-09-28 17:20:59.628] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:59.696] Codec Done
+[2026-09-28 17:20:59.731] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:20:59.820] Codec Done
+[2026-09-28 17:20:59.827] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:20:59.944] Codec Done
+[2026-09-28 17:20:59.951] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:00.071] Codec Done
+[2026-09-28 17:21:00.192] Codec Done
+[2026-09-28 17:21:00.309] Codec Done
+[2026-09-28 17:21:00.313] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:00.318] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:00.319] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:00.410] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:00.441] Codec Done
+[2026-09-28 17:21:00.555] Codec Done
+[2026-09-28 17:21:00.564] Codec Done
+[2026-09-28 17:21:00.637] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:00.639] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:00.648] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:00.876] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:00.999] Synthesis:  ['这样可以避免在最后一刻匆忙完成。']
+[2026-09-28 17:21:01.000] Starting TTS...
+[2026-09-28 17:21:01.031] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:01.156] Codec Done
+[2026-09-28 17:21:01.271] Codec Done
+[2026-09-28 17:21:01.357] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:01.443] Codec Done
+[2026-09-28 17:21:01.501] Codec Done
+[2026-09-28 17:21:01.582] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:01.764] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:01.792] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:01.888] Synthesis:  ['2：环境准备。']
+[2026-09-28 17:21:01.889] Starting TTS...
+[2026-09-28 17:21:02.041] Codec Done
+[2026-09-28 17:21:02.154] Codec Done
+[2026-09-28 17:21:02.169] Codec Done
+[2026-09-28 17:21:02.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:02.661] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:02.674] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:02.721] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:02.736] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:02.745] Synthesis:  ['选择一个安静，光线充足，没有干扰的地方进行作业。']
+[2026-09-28 17:21:02.747] Starting TTS...
+[2026-09-28 17:21:02.751] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:02.765] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:02.902] Codec Done
+[2026-09-28 17:21:03.023] Codec Done
+[2026-09-28 17:21:03.036] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:03.052] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:03.069] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:03.160] Codec Done
+[2026-09-28 17:21:03.275] Codec Done
+[2026-09-28 17:21:03.327] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:03.394] Codec Done
+[2026-09-28 17:21:03.435] Codec Done
+[2026-09-28 17:21:03.525] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:03.809] Synthesis:  ['确保你的学习环境有助于集中注意力。']
+[2026-09-28 17:21:03.810] Starting TTS...
+[2026-09-28 17:21:03.820] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:03.831] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:03.849] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:03.982] Codec Done
+[2026-09-28 17:21:04.097] Codec Done
+[2026-09-28 17:21:04.126] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:04.227] Codec Done
+[2026-09-28 17:21:04.271] Codec Done
+[2026-09-28 17:21:04.291] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:04.302] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:04.510] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:04.525] Synthesis:  ['3：工具准备。']
+[2026-09-28 17:21:04.526] Starting TTS...
+[2026-09-28 17:21:04.685] Codec Done
+[2026-09-28 17:21:04.698] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:04.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:04.784] Codec Done
+[2026-09-28 17:21:04.953] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:04.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.390] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.408] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.565] Synthesis:  ['确保你有所有需要的工具和资源，如计算器，公式表，笔记本等。']
+[2026-09-28 17:21:05.565] Starting TTS...
+[2026-09-28 17:21:05.592] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.732] Codec Done
+[2026-09-28 17:21:05.769] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.857] Codec Done
+[2026-09-28 17:21:05.975] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:05.980] Codec Done
+[2026-09-28 17:21:06.046] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:06.069] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:06.111] Codec Done
+[2026-09-28 17:21:06.233] Codec Done
+[2026-09-28 17:21:06.291] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:06.306] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:06.360] Codec Done
+[2026-09-28 17:21:06.452] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:06.536] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:06.546] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:06.759] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:06.838] Synthesis:  ['这样可以避免在进行作业时频繁中断。']
+[2026-09-28 17:21:06.839] Starting TTS...
+[2026-09-28 17:21:06.993] Codec Done
+[2026-09-28 17:21:07.041] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.066] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.136] Codec Done
+[2026-09-28 17:21:07.222] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.261] Codec Done
+[2026-09-28 17:21:07.322] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:07.338] Codec Done
+[2026-09-28 17:21:07.409] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.532] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:07.538] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.733] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:07.748] Synthesis:  ['4：休息与奖励。']
+[2026-09-28 17:21:07.748] Starting TTS...
+[2026-09-28 17:21:07.897] Codec Done
+[2026-09-28 17:21:07.914] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:07.929] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.026] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.037] Codec Done
+[2026-09-28 17:21:08.095] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:08.097] Codec Done
+[2026-09-28 17:21:08.294] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:08.304] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.321] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.498] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.598] Synthesis:  ['在完成每个小部分后，给自己短暂的休息时间。']
+[2026-09-28 17:21:08.599] Starting TTS...
+[2026-09-28 17:21:08.751] Codec Done
+[2026-09-28 17:21:08.803] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.819] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:08.893] Codec Done
+[2026-09-28 17:21:09.009] Codec Done
+[2026-09-28 17:21:09.116] Codec Done
+[2026-09-28 17:21:09.196] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:09.262] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:09.277] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:09.298] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:09.540] Synthesis:  ['休息可以帮助大脑恢复，提高效率。']
+[2026-09-28 17:21:09.541] Starting TTS...
+[2026-09-28 17:21:09.690] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:09.706] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:09.712] Codec Done
+[2026-09-28 17:21:09.760] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:09.833] Codec Done
+[2026-09-28 17:21:09.949] Codec Done
+[2026-09-28 17:21:09.998] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:10.001] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:10.004] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.029] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.046] Codec Done
+[2026-09-28 17:21:10.160] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:10.166] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.260] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.659] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.684] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.728] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:10.948] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.026] Synthesis:  ['完成整个作业后，给自己一个小奖励，比如看一集喜欢的剧集或吃一顿美食。']
+[2026-09-28 17:21:11.027] Starting TTS...
+[2026-09-28 17:21:11.046] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.193] Codec Done
+[2026-09-28 17:21:11.222] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.322] Codec Done
+[2026-09-28 17:21:11.404] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:11.409] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.450] Codec Done
+[2026-09-28 17:21:11.512] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.577] Codec Done
+[2026-09-28 17:21:11.693] Codec Done
+[2026-09-28 17:21:11.810] Codec Done
+[2026-09-28 17:21:11.838] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:11.853] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.898] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:11.922] Codec Done
+[2026-09-28 17:21:12.090] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:12.097] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:12.201] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:12.300] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:12.362] Synthesis:  ['5：检查与反思。']
+[2026-09-28 17:21:12.362] Starting TTS...
+[2026-09-28 17:21:12.522] Codec Done
+[2026-09-28 17:21:12.629] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:12.640] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:12.650] Codec Done
+[2026-09-28 17:21:12.744] Codec Done
+[2026-09-28 17:21:13.065] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:13.073] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.112] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.135] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.172] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.266] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.327] Synthesis:  ['在提交作业前，务必仔细检查你的工作。']
+[2026-09-28 17:21:13.328] Starting TTS...
+[2026-09-28 17:21:13.490] Codec Done
+[2026-09-28 17:21:13.559] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:13.571] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:13.625] Codec Done
+[2026-09-28 17:21:13.742] Codec Done
+[2026-09-28 17:21:13.846] Codec Done
+[2026-09-28 17:21:14.161] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:14.161] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:14.168] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.201] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.217] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.311] Synthesis:  ['确保所有的步骤都正确无误，答案准确。']
+[2026-09-28 17:21:14.312] Starting TTS...
+[2026-09-28 17:21:14.466] Codec Done
+[2026-09-28 17:21:14.521] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:14.597] Codec Done
+[2026-09-28 17:21:14.605] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.645] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.734] Codec Done
+[2026-09-28 17:21:14.826] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:14.836] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.867] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.880] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:14.886] Codec Done
+[2026-09-28 17:21:14.920] Codec Done
+[2026-09-28 17:21:14.993] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:14.996] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.021] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.201] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:15.217] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.405] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.594] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.694] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.842] Synthesis:  ['完成作业后，反思一下你的时间管理，学习策略是否有效，以便未来改进。']
+[2026-09-28 17:21:15.843] Starting TTS...
+[2026-09-28 17:21:15.883] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:15.983] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:16.014] Codec Done
+[2026-09-28 17:21:16.137] Codec Done
+[2026-09-28 17:21:16.172] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:16.192] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:16.265] Codec Done
+[2026-09-28 17:21:16.381] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:16.405] Codec Done
+[2026-09-28 17:21:16.428] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:16.510] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:16.530] Codec Done
+[2026-09-28 17:21:16.628] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:16.638] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:16.660] Codec Done
+[2026-09-28 17:21:16.776] Codec Done
+[2026-09-28 17:21:16.812] Codec Done
+[2026-09-28 17:21:17.005] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:17.011] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:17.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:17.396] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.445] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.460] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.478] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.591] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:17.989] Synthesis:  ['通过这些步骤，你不仅能够高效完成作业，还能够培养良好的学习习惯和时间管理能力。']
+[2026-09-28 17:21:17.990] Starting TTS...
+[2026-09-28 17:21:18.065] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.087] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.104] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.169] Codec Done
+[2026-09-28 17:21:18.286] Codec Done
+[2026-09-28 17:21:18.294] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:18.392] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.408] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.427] Codec Done
+[2026-09-28 17:21:18.550] Codec Done
+[2026-09-28 17:21:18.561] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:18.575] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.683] Codec Done
+[2026-09-28 17:21:18.799] Codec Done
+[2026-09-28 17:21:18.918] Codec Done
+[2026-09-28 17:21:18.956] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:18.969] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.986] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:18.992] Codec Done
+[2026-09-28 17:21:19.310] Synthesis:  ['祝你顺利完成作业！']
+[2026-09-28 17:21:19.310] Starting TTS...
+[2026-09-28 17:21:19.463] Codec Done
+[2026-09-28 17:21:19.572] Codec Done
+[2026-09-28 17:21:21.002] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:21.004] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:21:21.015] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.077] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.091] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.104] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.130] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.152] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.165] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.178] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.190] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.204] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.224] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.237] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.249] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.607] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.633] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.646] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:21.659] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.317] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.351] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.365] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.379] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.465] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.660] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.756] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:22.963] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:23.040] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:23.257] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:23.685] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:23.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.012] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.039] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.054] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.149] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.406] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.485] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.682] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.868] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:24.965] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:25.153] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:25.314] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:25.602] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:25.990] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.033] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.168] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.375] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.464] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.564] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.863] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:26.941] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.046] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.203] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.349] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.515] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.681] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:27.858] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.076] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.344] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.359] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.543] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.730] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:28.821] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.028] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.124] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.280] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.498] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.673] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.780] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:29.977] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.283] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.302] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.427] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.744] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.759] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:30.934] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.283] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.304] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.420] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.615] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.716] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:31.851] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.048] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.164] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.339] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.526] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.641] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.850] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:32.956] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.152] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.449] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.470] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.635] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.772] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:33.949] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.145] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.332] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.417] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.614] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.802] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:34.902] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.119] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.215] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.524] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.544] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.720] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:35.946] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.013] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.208] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.355] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.554] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.808] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:36.995] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.181] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.287] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.454] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.600] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.806] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:37.922] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.089] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.254] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.472] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.588] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.754] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:38.961] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.059] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.286] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.432] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.541] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.921] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:39.942] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.007] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.213] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.338] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.504] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.700] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.846] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:40.992] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.187] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.295] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.492] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.677] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.774] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:41.929] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.085] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.242] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.478] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.562] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.719] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:42.885] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.122] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.208] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.393] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.590] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.695] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:43.892] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.018] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.235] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.381] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.516] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.722] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:44.821] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.007] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.133] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.300] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.476] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.654] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.760] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:45.967] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.144] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.250] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.406] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.593] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.801] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:46.897] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.092] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.278] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.385] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.570] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.727] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:47.913] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.019] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.226] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.394] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.501] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.658] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.803] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:48.990] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.370] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.385] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.692] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.710] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.775] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:49.982] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.169] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.267] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.482] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.577] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.763] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:50.970] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.046] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.213] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.379] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.545] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.721] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:51.867] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.053] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.189] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.413] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.500] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.664] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.880] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:52.976] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:53.193] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:53.301] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:53.467] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:53.635] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:53.781] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.038] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.090] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.275] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.421] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.577] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.742] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:54.889] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.206] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.282] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.386] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.582] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.757] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:55.876] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.020] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.195] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.382] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.578] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.677] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:56.875] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.082] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.140] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.306] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.463] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.630] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.816] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:57.952] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:58.100] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:58.296] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:58.482] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:58.578] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:58.767] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.025] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.075] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.230] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.447] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.583] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.789] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:21:59.885] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.182] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.252] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.340] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.506] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.724] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:00.870] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.027] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.306] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.329] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.503] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.670] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.866] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:01.963] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.149] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.336] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.456] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.652] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.798] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:02.916] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.072] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.239] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.395] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.562] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.717] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:03.964] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.062] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.258] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.365] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.756] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.773] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:04.848] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.034] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.221] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.429] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.529] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.735] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.931] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:05.982] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.150] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.307] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.464] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.671] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.787] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:06.943] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.100] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.285] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.471] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.647] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.767] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:07.955] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.203] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.228] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.394] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.600] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.798] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:08.886] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.082] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.269] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.355] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.511] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.667] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:09.843] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.000] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.155] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.321] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.507] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.634] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.799] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:10.956] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.164] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.170] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Vad start
+[2026-09-28 17:22:11.234] State 1 prob: 0.0003, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.278] State 1 prob: 0.1098, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.320] State 1 prob: 0.3923, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.373] State 1 prob: 0.0011, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.417] State 1 prob: 0.1605, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.468] State 1 prob: 0.0083, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.510] State 1 prob: 0.0120, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.521] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.576] State 1 prob: 0.0097, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.587] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.634] State 1 prob: 0.0070, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.858] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.913] State 1 prob: 0.0757, State 2 prob: 0.0003 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.923] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:11.977] State 1 prob: 0.8385, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+[2026-09-28 17:22:11.998] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Detect break
+[2026-09-28 17:22:12.015] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.247] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.264] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.271] Synthesis:  ['当然，我随时准备着帮助你。']
+[2026-09-28 17:22:12.272] Starting TTS...
+[2026-09-28 17:22:12.481] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.534] Codec Done
+[2026-09-28 17:22:12.536] Do not need to split
+[2026-09-28 17:22:12.551] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:12.569] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.719] Codec Done
+[2026-09-28 17:22:12.744] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:12.758] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:12.793] Codec Done
+[2026-09-28 17:22:12.839] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:12.863] Codec Done
+[2026-09-28 17:22:12.877] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:12.929] Codec Done
+[2026-09-28 17:22:12.991] Codec Done
+[2026-09-28 17:22:13.006] Codec Done
+[2026-09-28 17:22:13.359] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:13.362] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:13.362] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:13.363] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:13.380] Synthesis:  ['请告诉我你需要什么帮助或讨论的问题。']
+[2026-09-28 17:22:13.381] Starting TTS...
+[2026-09-28 17:22:13.656] Codec Done
+[2026-09-28 17:22:13.682] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:13.705] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:13.932] Codec Done
+[2026-09-28 17:22:14.075] Codec Done
+[2026-09-28 17:22:14.135] Codec Done
+[2026-09-28 17:22:14.307] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:14.518] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:14.593] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:14.873] Synthesis:  ['无论是学习，工作，生活规划，还是其他任何方面，都可以直接提出你的需求。']
+[2026-09-28 17:22:14.874] Starting TTS...
+[2026-09-28 17:22:15.027] Codec Done
+[2026-09-28 17:22:15.102] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.134] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.148] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.168] Codec Done
+[2026-09-28 17:22:15.180] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:15.197] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.239] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.253] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.266] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.282] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.302] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.316] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.331] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.357] Codec Done
+[2026-09-28 17:22:15.479] Codec Done
+[2026-09-28 17:22:15.586] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:15.597] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.610] Codec Done
+[2026-09-28 17:22:15.675] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.735] Codec Done
+[2026-09-28 17:22:15.767] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:15.775] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:15.877] Codec Done
+[2026-09-28 17:22:15.950] Codec Done
+[2026-09-28 17:22:16.088] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:16.097] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:16.169] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:16.346] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:16.365] Synthesis:  ['我会尽力提供支持和解答。']
+[2026-09-28 17:22:16.365] Starting TTS...
+[2026-09-28 17:22:16.552] Codec Done
+[2026-09-28 17:22:16.700] Codec Done
+[2026-09-28 17:22:16.772] Codec Done
+[2026-09-28 17:22:17.224] Sid:  dLJ4Ay4gxyPzNtGGAAAB Send TTS data
+[2026-09-28 17:22:17.444] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:17.483] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:17.496] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:17.512] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:17.526] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:18.566] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:18.610] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:18.623] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:18.635] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:18.648] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:20.499] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:20.535] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:20.548] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:20.562] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:20.574] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.503] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.554] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.568] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.581] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.594] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:21.607] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:22.294] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:22.733] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.052] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.107] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.120] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.134] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.147] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.160] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.177] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.261] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.609] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.657] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.671] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.684] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.696] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.709] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.722] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:23.947] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:24.328] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:24.411] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:24.427] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:24.442] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560
+[2026-09-28 17:22:24.455] Sid:  dLJ4Ay4gxyPzNtGGAAAB  Received PCM data:  2560

@@ -1,0 +1,35 @@
+Namespace(model_path='./checkpoints', llm_path='./Qwen2-7B-Instruct', top_k=20, top_p=0.8, temperature=0.8, input_wav='./assets/question.wav', output_wav='./assets/answer_test.wav')
+the number of speech encoder params: 341.3681640625M
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  7.21it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 15.28it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 14.08it/s]
+/root/miniconda3/envs/freeze-omni/lib/python3.10/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+/root/autodl-tmp/timing/Freeze-Omni/models/audioLLM.py:421: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  prob = F.softmax(state_logits[:, :-1])
+/root/autodl-tmp/timing/Freeze-Omni/bin/inference.py:74: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  sample_data = torch.tensor(audio).reshape(1, -1, 1)[:, :, :1] * 32768
+We detected that you are passing `past_key_values` as a tuple of tuples. This is deprecated and will be removed in v4.47. Please convert your cache or use an appropriate `Cache` class (https://huggingface.co/docs/transformers/kv_cache#legacy-cache-format)
+Checkpoint: loading from checkpoint ./checkpoints/audiollm/final.pt for GPU
+reading a config file from ./checkpoints/decoder/model.json
+Removing weight norm...
+Removing weight norm...
+[tuning] reloaded: {'state_th1': 0.5, 'state_th2': 0.5, 'vad_threshold': 0.8, 'vad_min_silence_ms': 2000, 'vad_speech_pad_ms': 30} (was: {})
+State 1 prob: 0.9872, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+State 1 prob: 0.0000, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+State 1 prob: 0.0040, State 2 prob: 0.0025 (th1=0.50, th2=0.50)
+State 1 prob: 0.0003, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+State 1 prob: 0.0002, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+State 1 prob: 0.0001, State 2 prob: 0.0000 (th1=0.50, th2=0.50)
+State 1 prob: 0.0008, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+State 1 prob: 0.0008, State 2 prob: 0.0002 (th1=0.50, th2=0.50)
+State 1 prob: 0.0018, State 2 prob: 0.0009 (th1=0.50, th2=0.50)
+State 1 prob: 0.0025, State 2 prob: 0.0005 (th1=0.50, th2=0.50)
+State 1 prob: 0.3088, State 2 prob: 0.0006 (th1=0.50, th2=0.50)
+State 1 prob: 0.9391, State 2 prob: 0.0001 (th1=0.50, th2=0.50)
+State 1 prob: 0.9916, State 2 prob: 0.0004 (th1=0.50, th2=0.50)
+State 1 prob: 0.9855, State 2 prob: 0.0027 (th1=0.50, th2=0.50)
+Synthesis:  ['The capital of France is Paris.']
+Starting TTS...
+Codec Done
+Codec Done
+Codec Done
+The capital of France is Paris.

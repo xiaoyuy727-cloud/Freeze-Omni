@@ -416,4 +416,7 @@ if __name__ == "__main__":
     key_file = "web/resources/key.pem"
     if not os.path.exists(cert_file) or not os.path.exists(key_file):
         generate_self_signed_cert(cert_file, key_file)
-    socketio.run(app, host=configs.ip, port=configs.port, ssl_context=(cert_file, key_file))
+    # allow_unsafe_werkzeug: Werkzeug 3.x makes flask_socketio refuse to start
+    # otherwise; this single-user local demo is fine on the dev server
+    socketio.run(app, host=configs.ip, port=configs.port, ssl_context=(cert_file, key_file),
+                 allow_unsafe_werkzeug=True)
